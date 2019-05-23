@@ -1,0 +1,78 @@
+.xx2{
+position:absolutely;
+top:100px
+left:100px;
+right: 100px;
+}
+.color p{
+	font-family:"eras medium itc";
+    font-size: 18px;
+	color:#B2B2B2;
+	text-align: center;
+}
+
+.color span{
+	font-family: "微软雅黑";
+	  font-size: 18px;
+	color:red;
+	text-align: center;
+}
+a:hover
+{ 
+  background-color:yellow;
+}
+
+
+    .content{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+   
+    .content p{
+        font-size: 14px;
+        margin-top: 10px;
+        color: #D0D0D0;
+    }
+    .content .btn{
+        width: 80px;
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+        color: #dc6565;
+        margin: 40px auto;
+        background-color: #fff;
+        border: 1px solid #dc6565;
+    }
+    .content:hover{
+        margin-top: 30px;
+        border: 3px solid red;
+    }
+    .content:hover .btn{
+        color: #fff;
+        background-color: #dc6565;
+    }
+strong{
+	  font-size:50px; 
+      text-align:center;
+	  
+}
+  h1{
+	  font-size:45px; 
+      color:#000000;
+      text-align:center;
+       margin-top: 10px;
+   }
+   .box{
+   
+		border-style: solid;
+		border-color: #000000;
+		padding: 5px;
+		margin-bottom: 10px;
+		
+
+
+   }

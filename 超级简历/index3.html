@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简历修改-求职简历优化-专业导师简历辅导-超级简历WonderCV</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="layui/css/daohanglan.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/img.css"/>
+		<script type="text/javascript " src="layui/layui.js"></script>
+	</head>
+	<body style="background: #F2F2F2;">
+		    <div class="layui-row layui-col-xs12" style="width: 100%;height: 85px;text-align: center;font-size:37px;margin-top: 100px;">距离你的梦想，可能之差一臂之力</div>
+	
+	     	<div class="layui-row" style="width: 100%;height:50px;  ">
+	   	       <div class="layui-col-md8 layui-col-lg-offset2 layui-col-xs8 color ">
+                   <p>业界最顶级的导师辅导，拥有全球名企实战经验，<span>2倍以上面试邀请</span>，帮</p>
+               </div>
+	        </div>
+	        <font color=#B2B2B2 size="3">
+	           <div class="layui-row layui-col-xs12" style="width: 100%;height:50px;text-align: center;font-size:18px;">你拿到梦想的offer</div>
+	        </font>
+	       
+	        <div class="layui-row" style="width: 80%;height: 400px; margin: 0 0 100px 300px;">
+	        	
+	        	<div class="layui-col-md2  layui-col-xs12 content" style="height: 350px;width: 20%;background: #FBFBFB;">
+	        		  
+	        		  	<h1 >体验版</h1>
+                        <p>1轮 简历辅导反馈</p >
+                        <i class="layui-icon layui-icon-rmb" style="color: #FF0000;margin: 0 10px 20px 0px;"><strong>99</strong></i>   
+                        <p>适用于：申请实习</p >
+                        <p>可选中文或英文简历</p >
+                        <div   id="layerDemo" >
+					         <button data-method="offset" class="layui-btn btn">立即进入</button>
+			            </div>
+                      
+	        	</div>
+	        	<div class="layui-col-md1" style="height: 350px;width: 1%;"></div>
+	        	<div class="layui-col-md2  layui-col-xs12 content" style="height: 350px;width: 20%;background: #FBFBFB;">
+	        			<h1 >专业版</h1>
+                        <p>30 天内多轮 简历辅导反馈</p >
+                        <i class="layui-icon layui-icon-rmb" style="color: #FF0000;margin: 0 10px 20px 0px;"><strong>399</strong></i>   
+                        <p>适用于：申请全职 跳槽转行</p >
+                        <p>提供职业规划建议*</p >
+                       <div class="btn">立即体验</div>
+	        	</div>
+	        	<div class="layui-col-md1" style="height: 350px;width: 1%;"></div>
+	        	<div class="layui-col-md2  layui-col-xs12 content" style="height: 350px;width: 20%;background: #FBFBFB;">
+	        			<h1 >双语套餐</h1>
+                        <p>30 天内 多轮辅导反馈</p >
+                        <i class="layui-icon layui-icon-rmb" style="color: #FF0000;margin: 0 10px 20px 0px;"><strong>999</strong></i>   
+                        <p>中英文简历 求职信</p >
+                        <p>整套求职文件辅导</p >
+                       <div class="btn">立即体验</div>
+	        	</div>
+	        	
+            </div>
+            
+
+	       
+	        <!--<div class="layui-row">横线
+	        	<div class="layui-col-md8 layui-col-lg-offset2">
+	        		 <hr width="100%" align="center" size="3"color="#777777"/>
+	        	</div>;
+	        </div>-->
+	        
+	        
+	       
+	        <script>
+			layui.use('layer', function() { //独立版的layer无需执行这一句
+				var $ = layui.jquery,
+					layer = layui.layer; //独立版的layer无需执行这一句
+
+				//触发事件
+				var active = {
+					setTop: function() {
+						var that = this;
+						//多窗口模式，层叠置顶
+						layer.open({
+							type: 2 //此处以iframe举例
+								,
+							
+							area: ['390px', '260px'],
+							shade: 0,
+							maxmin: true,
+							offset: [ //为了演示，随机坐标
+								Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+							],
+
+							yes: function() {
+								$(that).click();
+							},
+
+							zIndex: layer.zIndex //重点1
+								,
+							success: function(layero) {
+								layer.setTop(layero); //重点2
+							}
+						});
+					},
+					offset: function(othis) {
+						var type = othis.data('type'),
+							text = othis.text();
+	    var  img='<img src="layui/img/xz.png" width:"200px" height"200px" align="center"/><div style="width:90% ; margin:0 auto; margin-top:30px" ><li class="layui-icon layui-icon-login-wechat" >扫码立即生成专业简历</li></div><div style="width: 45%; margin: 0 auto; margin-top:30px"><a style="text-decoration: underline;" href=""> 其他注册方式</a> </div>'
+						
+
+						layer.open({
+							title:'',
+							type: 1,
+							offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+								,
+							id: 'layerDemo' + type //防止重复弹出
+								,
+							content: '<div style="padding: 50px 80px;">' + img + '</div>',
+							
+							btnAlign: 'c' //按钮居中
+								,
+							shade: 0 //不显示遮罩
+								,
+							yes: function() {
+								layer.closeAll();
+							}
+						});
+					}
+				};
+
+				$('#layerDemo .layui-btn').on('click', function() {
+					var othis = $(this),
+						method = othis.data('method');
+					active[method] ? active[method].call(this, othis) : '';
+				});
+
+			});
+		</script>
+
+
+  
+	</body>
+</html>

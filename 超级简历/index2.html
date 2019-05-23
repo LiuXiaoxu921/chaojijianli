@@ -1,0 +1,116 @@
+<!DOCTYPE >
+<html lang="zh">
+
+	<head>
+		<title>专业求职邮箱-WanderCV</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="layui/css/daohanglan.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/img.css"/>
+		<script type="text/javascript " src="layui/layui.js"></script>
+		
+	</head>
+
+	<body style="background: #F2F2F2;">
+		<div class="layui-row layui-col-xs12" style="width: 100%;height: 50px;text-align: center;font-size:35px;margin-top: 100px;">求职信 Jobmail.vip 专业邮箱</div>
+		<font color="#4E5465" size="3">
+			<div class="layui-row layui-col-xs12" style="width: 100%;height: 50px;text-align: center;margin-top: 20px;">提供多场景求职邮件模板，用一封吸引 HR 的求职信，助你大幅提高简历通过率</div>
+		</font>
+		<div class="layui-row layui-col-xs12 " >
+		<div class="layui-col-md1 layui-col-lg-offset5 layui-col-xs3  button" id="layerDemo" >
+					<button data-method="offset" class="layui-btn layui-btn-fluid" style=" width: 200px;background: red;border-radius: 15px;">立即进入</button>
+		</div>
+			
+		
+		</div>
+
+        <div class="layui-row layui-col-xs12">
+		   <div align="center" >
+			
+				<img src="layui/img/浏览器_渐变2@2x.png"  style="width: 75%;height: 410px;  "/>
+
+		   </div>
+		   
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	<script>
+			layui.use('layer', function() { //独立版的layer无需执行这一句
+				var $ = layui.jquery,
+					layer = layui.layer; //独立版的layer无需执行这一句
+
+				//触发事件
+				var active = {
+					setTop: function() {
+						var that = this;
+						//多窗口模式，层叠置顶
+						layer.open({
+							type: 2 //此处以iframe举例
+								,
+							
+							area: ['390px', '260px'],
+							shade: 0,
+							maxmin: true,
+							offset: [ //为了演示，随机坐标
+								Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+							],
+
+							yes: function() {
+								$(that).click();
+							},
+
+							zIndex: layer.zIndex //重点1
+								,
+							success: function(layero) {
+								layer.setTop(layero); //重点2
+							}
+						});
+					},
+					offset: function(othis) {
+						var type = othis.data('type'),
+							text = othis.text();
+	    var  img='<img src="layui/img/xz.png" width:"200px" height"200px" align="center"/><div style="width:90% ; margin:0 auto; margin-top:30px" ><li class="layui-icon layui-icon-login-wechat" >扫码立即生成专业简历</li></div><div style="width: 45%; margin: 0 auto; margin-top:30px"><a style="text-decoration: underline;" href=""> 其他注册方式</a> </div>'
+						
+
+						layer.open({
+							title:'',
+							type: 1,
+							offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+								,
+							id: 'layerDemo' + type //防止重复弹出
+								,
+							content: '<div style="padding: 50px 80px;">' + img + '</div>',
+							
+							btnAlign: 'c' //按钮居中
+								,
+							shade: 0 //不显示遮罩
+								,
+							yes: function() {
+								layer.closeAll();
+							}
+						});
+					}
+				};
+
+				$('#layerDemo .layui-btn').on('click', function() {
+					var othis = $(this),
+						method = othis.data('method');
+					active[method] ? active[method].call(this, othis) : '';
+				});
+
+			});
+		</script>
+
+
+
+
+
+	</body>
